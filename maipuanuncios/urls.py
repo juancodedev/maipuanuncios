@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from apps.home.views import HomeList
+from apps.post.views import PostView
 from django.urls import include, path, re_path
 from django.conf.urls.static import static
 from django.conf import settings
@@ -25,5 +26,6 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeList.as_view(), name='index'), #Vista estatica del index Vista Operativa
+    path('post/', PostView.as_view(), name='post')
     #path('', IndexList.as_view(), name='index'), #Vista estatica del index Vista Operativa
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

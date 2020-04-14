@@ -4,7 +4,6 @@ from apps.home.models import advertisement
 
 # Create your views here.
 
-class HomeList(ListView):
+class PostView(ListView):
     model = advertisement
-    template_name = 'home.html'
-
+    template_name = 'post.html'
