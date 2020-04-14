@@ -26,4 +26,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeList.as_view(), name='index'), #Vista estatica del index Vista Operativa
     #path('', IndexList.as_view(), name='index'), #Vista estatica del index Vista Operativa
-    ]
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html class="no-js" lang="es">
+<html class="no-js" lang="en">
 
     <head>
         <!-- meta data -->
@@ -32,13 +32,13 @@
 
 		<!--slick.css-->
         <link rel="stylesheet" href="{% static "assets/css/slick.css" %}">
-		<link rel="stylesheet" href="{% static "assets/css/slick-theme.css"%}">
+		<link rel="stylesheet" href="{% static "assets/css/slick-theme.css"%}>
 		
         <!--bootstrap.min.css-->
         {% comment %} <link rel="stylesheet" href="assets/css/bootstrap.min.css"> {% endcomment %}
-		<link rel="stylesheet" href="{% static "assets/css/bootstrap.min.css" %}">
+		{% comment %} <link rel="stylesheet" href="{% static "assets/css/bootstrap.min.css" %}"> {% endcomment %}
 		<!-- Version WEB-->
-		{% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> {% endcomment %}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		
 		<!-- bootsnav -->
 		{% comment %} <link rel="stylesheet" href="assets/css/bootsnav.css" >	 {% endcomment %}
@@ -68,7 +68,7 @@
 		
 		<!--header-top start -->
 		<header id="header-top" class="header-top">
-			{% comment %} <ul>
+			<ul>
 				<li>
 					<div class="header-top-left">
 						<ul>
@@ -107,7 +107,7 @@
 						</ul>
 					</div>
 				</li>
-			</ul> {% endcomment %}
+			</ul>
 					
 		</header><!--/.header-top-->
 		<!--header-top end -->
@@ -125,7 +125,7 @@
 			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 			                    <i class="fa fa-bars"></i>
 			                </button>
-			                <a class="navbar-brand" href="index.html">Maipu<span>Anuncios</span></a>
+			                <a class="navbar-brand" href="index.html">list<span>race</span></a>
 
 			            </div><!--/.navbar-header-->
 			            <!-- End Header Navigation -->
@@ -134,11 +134,11 @@
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                    <li class=" scroll active"><a href="#home">home</a></li>
-			                    <li class="scroll"><a href="#works">como funciona</a></li>
-			                    <li class="scroll"><a href="#explore">explorar</a></li>
+			                    <li class="scroll"><a href="#works">how it works</a></li>
+			                    <li class="scroll"><a href="#explore">explore</a></li>
 			                    <li class="scroll"><a href="#reviews">review</a></li>
 			                    <li class="scroll"><a href="#blog">blog</a></li>
-			                    <li class="scroll"><a href="#contact">contacto</a></li>
+			                    <li class="scroll"><a href="#contact">contact</a></li>
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->
@@ -154,14 +154,12 @@
 		<section id="home" class="welcome-hero">
 			<div class="container">
 				<div class="welcome-hero-txt">
-					{% comment %} <h2>best place to find and explore <br> that all you need </h2> {% endcomment %}
-					<h2>busca y encuentra los mejores anuncios en nuestra comuna<br> todo lo que necesitas </h2>
+					<h2>best place to find and explore <br> that all you need </h2>
 					<p>
-						Busca buenos lugares, Almacenes, Botillerias, peluquerias, Servicios y muchos más en solo un clic
+						Find Best Place, Restaurant, Hotel, Real State and many more think in just One click 
 					</p>
 				</div>
-
-				{% comment %} <div class="welcome-hero-serch-box">
+				<div class="welcome-hero-serch-box">
 					<div class="welcome-hero-form">
 						<div class="single-welcome-hero-form">
 							<h3>what?</h3>
@@ -187,7 +185,7 @@
 							 search  <i data-feather="search"></i> 
 						</button>
 					</div>
-				</div> {% endcomment %}
+				</div>
 			</div>
 
 		</section><!--/.welcome-hero-->
@@ -201,30 +199,27 @@
 						<li>
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
-									<i class="flaticon-coffee-shop"></i>
-									{% comment %} <i class="flaticon-lightbulb-idea"></i> {% endcomment %}
+									<i class="flaticon-restaurant"></i>
 								</div>
-								<h2><a href="#">cafeterias</a></h2>
+								<h2><a href="#">resturent</a></h2>
 								<p>150 listings</p>
 							</div>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
-									{% comment %} <i class="flaticon-travel"></i> {% endcomment %}
-									<i class="flaticon-necklace"></i>
+									<i class="flaticon-travel"></i>
 								</div>
-								<h2><a href="#">Joyeria</a></h2>
+								<h2><a href="#">destination</a></h2>
 								<p>214 listings</p>
 							</div>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
-									{% comment %} <i class="flaticon-building"></i> {% endcomment %}
-									<i class="flaticon-eye-makeup"></i>
+									<i class="flaticon-building"></i>
 								</div>
-								<h2><a href="#">belleza</a></h2>
+								<h2><a href="#">hotels</a></h2>
 								<p>185 listings</p>
 							</div>
 						</li>
@@ -233,16 +228,16 @@
 								<div class="single-list-topics-icon">
 									<i class="flaticon-pills"></i>
 								</div>
-								<h2><a href="#">farmacias</a></h2>
+								<h2><a href="#">healthcaree</a></h2>
 								<p>200 listings</p>
 							</div>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
-									<i class="flaticon-mechanic"></i>
+									<i class="flaticon-transport"></i>
 								</div>
-								<h2><a href="#">mecanicos</a></h2>
+								<h2><a href="#">automotion</a></h2>
 								<p>120 listings</p>
 							</div>
 						</li>
@@ -257,50 +252,50 @@
 		<section id="works" class="works">
 			<div class="container">
 				<div class="section-header">
-					<h2>Como funciona</h2>
-					<p>Obtenga más información sobre cómo funciona nuestro sitio web</p>
+					<h2>how it works</h2>
+					<p>Learn More about how our website works</p>
 				</div><!--/.section-header-->
 				<div class="works-content">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
-									<i class="flaticon-lamp"></i>
+									<i class="flaticon-lightbulb-idea"></i>
 								</div>
-								<h2><a href="#">Elige <span> que</span> buscas</a></h2>
+								<h2><a href="#">choose <span> what to</span> do</a></h2>
 								<p>
 									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									Lee mas
+									read more
 								</button>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
-									<i class="flaticon-job-search"></i>
+									<i class="flaticon-networking"></i>
 								</div>
-								<h2><a href="#">Encuentra <span>lo que buscas</span></a></h2>
+								<h2><a href="#">find <span> what you want</span></a></h2>
 								<p>
 									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									Lee mas
+									read more
 								</button>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
 							<div class="single-how-works">
 								<div class="single-how-works-icon">
-									<i class="flaticon-location"></i>
+									<i class="flaticon-location-on-road"></i>
 								</div>
-								<h2><a href="#">disfrutalos </a></h2>
+								<h2><a href="#">explore <span> amazing</span> place</a></h2>
 								<p>
 									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
 								</p>
 								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									Lee mas
+									read more
 								</button>
 							</div>
 						</div>
@@ -315,8 +310,8 @@
 		<section id="explore" class="explore">
 			<div class="container">
 				<div class="section-header">
-					<h2>explora</h2>
-					<p>Explore un nuevo lugar, comida, cultura, servicios y muchos más.</p>
+					<h2>explore</h2>
+					<p>Explore New place, food, culture around the world and many more</p>
 				</div><!--/.section-header-->
 				<div class="explore-content">
 					<div class="row">
@@ -325,7 +320,7 @@
 								<div class="single-explore-img">
 									<img src="{% static "assets/images/explore/e1.jpg"%}" alt="explore image">
 									<div class="single-explore-img-info">
-										<button onclick="window.location.href='#'">mejor ranqueado</button>
+										<button onclick="window.location.href='#'">best rated</button>
 										<div class="single-explore-image-icon-box">
 											<ul>
 												<li>
@@ -372,7 +367,7 @@
 									<div class="explore-open-close-part">
 										<div class="row">
 											<div class="col-sm-5">
-												<button class="close-btn" onclick="window.location.href='#'">Cerrado</button>
+												<button class="close-btn" onclick="window.location.href='#'">close now</button>
 											</div>
 											<div class="col-sm-7">
 												<div class="explore-map-icon">
@@ -391,7 +386,7 @@
 								<div class="single-explore-img">
 									<img src=" {% static "assets/images/explore/e2.jpg" %}" alt="explore image">
 									<div class="single-explore-img-info">
-										<button onclick="window.location.href='#'">destacados</button>
+										<button onclick="window.location.href='#'">featured</button>
 										<div class="single-explore-image-icon-box">
 											<ul>
 												<li>
@@ -438,7 +433,7 @@
 									<div class="explore-open-close-part">
 										<div class="row">
 											<div class="col-sm-5">
-												<button class="close-btn open-btn" onclick="window.location.href='#'">Abierto ahora</button>
+												<button class="close-btn open-btn" onclick="window.location.href='#'">open now</button>
 											</div>
 											<div class="col-sm-7">
 												<div class="explore-map-icon">
@@ -457,7 +452,7 @@
 								<div class="single-explore-img">
 									<img src="{% static "assets/images/explore/e3.jpg"%}" alt="explore image">
 									<div class="single-explore-img-info">
-										<button onclick="window.location.href='#'">mejor ranqueado</button>
+										<button onclick="window.location.href='#'">best rated</button>
 										<div class="single-explore-image-icon-box">
 											<ul>
 												<li>
@@ -504,7 +499,7 @@
 									<div class="explore-open-close-part">
 										<div class="row">
 											<div class="col-sm-5">
-												<button class="close-btn" onclick="window.location.href='#'">Cerrado</button>
+												<button class="close-btn" onclick="window.location.href='#'">close now</button>
 											</div>
 											<div class="col-sm-7">
 												<div class="explore-map-icon">
@@ -523,7 +518,7 @@
 								<div class="single-explore-img">
 									<img src="{% static "assets/images/explore/e4.jpg" %}" alt="explore image">
 									<div class="single-explore-img-info">
-										<button onclick="window.location.href='#'">mas visto</button>
+										<button onclick="window.location.href='#'">most view</button>
 										<div class="single-explore-image-icon-box">
 											<ul>
 												<li>
@@ -572,7 +567,7 @@
 									<div class="explore-open-close-part">
 										<div class="row">
 											<div class="col-sm-5">
-												<button class="close-btn" onclick="window.location.href='#'">Cerrado</button>
+												<button class="close-btn" onclick="window.location.href='#'">close now</button>
 											</div>
 											<div class="col-sm-7">
 												<div class="explore-map-icon">
@@ -591,7 +586,7 @@
 								<div class="single-explore-img">
 									<img src="{% static "assets/images/explore/e5.jpg" %}" alt="explore image">
 									<div class="single-explore-img-info">
-										<button onclick="window.location.href='#'">destacados</button>
+										<button onclick="window.location.href='#'">featured</button>
 										<div class="single-explore-image-icon-box">
 											<ul>
 												<li>
@@ -638,7 +633,7 @@
 									<div class="explore-open-close-part">
 										<div class="row">
 											<div class="col-sm-5">
-												<button class="close-btn open-btn" onclick="window.location.href='#'">Abierto ahora</button>
+												<button class="close-btn open-btn" onclick="window.location.href='#'">open now</button>
 											</div>
 											<div class="col-sm-7">
 												<div class="explore-map-icon">
@@ -657,7 +652,7 @@
 								<div class="single-explore-img">
 									<img src="{% static "assets/images/explore/e6.jpg" %}" alt="explore image">
 									<div class="single-explore-img-info">
-										<button onclick="window.location.href='#'">mejor ranqueado</button>
+										<button onclick="window.location.href='#'">best rated</button>
 										<div class="single-explore-image-icon-box">
 											<ul>
 												<li>
@@ -704,7 +699,7 @@
 									<div class="explore-open-close-part">
 										<div class="row">
 											<div class="col-sm-5">
-												<button class="close-btn" onclick="window.location.href='#'">Cerrado</button>
+												<button class="close-btn" onclick="window.location.href='#'">close now</button>
 											</div>
 											<div class="col-sm-7">
 												<div class="explore-map-icon">
@@ -728,8 +723,8 @@
 		<!--reviews start -->
 		<section id="reviews" class="reviews">
 			<div class="section-header">
-				<h2>opiniones de clientes</h2>
-				<p>Lo que nuestro cliente dice de nosotros</p>
+				<h2>clients reviews</h2>
+				<p>What our client say about us</p>
 			</div><!--/.section-header-->
 			<div class="reviews-content">
 				<div class="testimonial-carousel">
@@ -949,7 +944,7 @@
 							<div class="statistics-content">
 								<div class="counter">90 </div> <span>K+</span>
 							</div><!--/.statistics-content-->
-							<h3>listados</h3>
+							<h3>listings</h3>
 						</div><!--/.single-ststistics-box-->
 					</div><!--/.col-->
 					<div class="col-md-3 col-sm-6">
@@ -957,7 +952,7 @@
 							<div class="statistics-content">
 								<div class="counter">40</div> <span>k+</span>
 							</div><!--/.statistics-content-->
-							<h3>categorias listadas</h3>
+							<h3>listing categories</h3>
 						</div><!--/.single-ststistics-box-->
 					</div><!--/.col-->
 					<div class="col-md-3 col-sm-6">
@@ -965,7 +960,7 @@
 							<div class="statistics-content">
 								<div class="counter">65</div> <span>k+</span>
 							</div><!--/.statistics-content-->
-							<h3>visitantes</h3>
+							<h3>visitors</h3>
 						</div><!--/.single-ststistics-box-->
 					</div><!--/.col-->
 					<div class="col-md-3 col-sm-6">
@@ -973,7 +968,7 @@
 							<div class="statistics-content">
 								<div class="counter">50</div> <span>k+</span>
 							</div><!--/.statistics-content-->
-							<h3>clientes felices</h3>
+							<h3>happy clients</h3>
 						</div><!--/.single-ststistics-box-->
 					</div><!--/.col-->
 				</div><!--/.statistics-counter-->	
@@ -986,8 +981,8 @@
 		<section id="blog" class="blog" >
 			<div class="container">
 				<div class="section-header">
-					<h2>noticias y articulos</h2>
-					<p>Siempre actualizado con nuestras últimas noticias y artículos </p>
+					<h2>news and articles</h2>
+					<p>Always upto date with our latest News and Articles </p>
 				</div><!--/.section-header-->
 				<div class="blog-content">
 					<div class="row">
@@ -1045,19 +1040,19 @@
 			<div class="container">
 				<div class="subscribe-title text-center">
 					<h2>
-						Suscribete y mantente al dia de nuevos negocios de tu comuna
+						do you want to add your business listing with us?
 					</h2>
 					<p>
-						MaipuAnuncios le entrega el mejor listado de negocios y servicios cerca suyo
+						Listrace offer you to list your business with us and we very much able to promote your Business.
 					</p>
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="subscription-input-group">
 							<form action="#">
-								<input type="email" class="subscription-input-form" placeholder="Ingresa tu email aqui">
+								<input type="email" class="subscription-input-form" placeholder="Enter your email here">
 								<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
-									suscribete
+									creat account
 								</button>
 							</form>
 						</div>
@@ -1075,17 +1070,17 @@
 		           	<div class="row">
 			           	<div class="col-sm-3">
 			           		 <div class="navbar-header">
-				                <a class="navbar-brand" href="index.html">Maipu<span>Anuncios</span></a>
+				                <a class="navbar-brand" href="index.html">list<span>race</span></a>
 				            </div><!--/.navbar-header-->
 			           	</div>
 			           	<div class="col-sm-9">
 			           		<ul class="footer-menu-item">
-			                    <li class="scroll"><a href="#works">como funciona</a></li>
-			                    <li class="scroll"><a href="#explore">explorar</a></li>
+			                    <li class="scroll"><a href="#works">how it works</a></li>
+			                    <li class="scroll"><a href="#explore">explore</a></li>
 			                    <li class="scroll"><a href="#reviews">review</a></li>
 			                    <li class="scroll"><a href="#blog">blog</a></li>
-			                    <li class="scroll"><a href="#contact">contacto</a></li>
-			                    <li class=" scroll"><a href="#contact">mi cuenta</a></li>
+			                    <li class="scroll"><a href="#contact">contact</a></li>
+			                    <li class=" scroll"><a href="#contact">my account</a></li>
 			                </ul><!--/.nav -->
 			           	</div>
 		           </div>
@@ -1094,17 +1089,16 @@
 					<div class="row">
 						<div class="col-sm-5">
 							<p>
-								{% comment %} &copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a> {% endcomment %}
-								&copy;copyright. plantilla diseñada y desarrollada por  <a href="https://www.themesine.com/">Themeisle</a>, Programacion del sitio por <a href="https://www.linkedin.com/in/juanshocl/" target="_blank">@juanshocl</a>
+								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
 							</p><!--/p-->
 						</div>
 						<div class="col-sm-7">
 							<div class="footer-social">
 								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
-								<a href="https://www.facebook.com/maipuanuncio" target="_blank"><i class="fa fa-facebook"></i></a>	
-								<a href="https://twitter.com/maipuanuncio" target="_blank"><i class="fa fa-twitter"></i></a>
-								<a href="https://www.instagram.com/maipuanuncio/" target="_blank"><i class="fa fa-instagram"></i></a>
-								{% comment %} <a href="#"><i class="fa fa-google-plus"></i></a> {% endcomment %}
+								<a href="#"><i class="fa fa-facebook"></i></a>	
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-google-plus"></i></a>
 							</div>
 						</div>
 					</div>
@@ -1130,9 +1124,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		
 		<!--bootstrap.min.js-->
-        <script src="{% static "assets/js/bootstrap.min.js" %}"></script>
+        {% comment %} <script src="{% static "assets/js/bootstrap.min.js" %}"></script> {% endcomment %}
 		<!--Version WEB-->
-		{% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> {% endcomment %}
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
 		<!-- bootsnav js -->
 		{% comment %} <script src="assets/js/bootsnav.js"></script> {% endcomment %}
