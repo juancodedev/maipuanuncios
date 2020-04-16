@@ -17,14 +17,17 @@ from django.conf.urls import url
 from django.contrib import admin
 from apps.home.views import HomeList
 from apps.post.views import PostView
+from apps.admins.views import Admins
 from django.urls import include, path, re_path
 from django.conf.urls.static import static
 from django.conf import settings
 from django.conf.urls import url
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('admins/', Admins.as_view(), name = 'admins'),
     path('', HomeList.as_view(), name='index'), #Vista estatica del index Vista Operativa
     path('post/', PostView.as_view(), name='post')
     #path('', IndexList.as_view(), name='index'), #Vista estatica del index Vista Operativa
