@@ -7,3 +7,8 @@ class Admins(ListView):
     model = advertisement
     template_name = 'admins.html'
 
+class Forms(ListView):
+    model = advertisement
+    template_name = 'forms.html'
+
+
