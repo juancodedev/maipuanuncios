@@ -11,4 +11,7 @@ class Forms(ListView):
     model = advertisement
     template_name = 'forms.html'
 
+class AllList(ListView):
+    model = advertisement
+    template_name = 'admin_all.html'
 
