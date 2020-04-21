@@ -3,12 +3,13 @@ import uuid
 from apps.home.models import advertisement
 
 # Create your models here.
+
 class  roles(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False) 
     role = models.CharField(max_length=50)
     description = models.CharField(max_length=50)
-    user_id = models.CharField(max_length=50)
-
+    #user_id = models.ForeignKey(user, on_delete=models.CASCADE, default=None)
+    
 class user(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     username = models.CharField
@@ -19,6 +20,9 @@ class user(models.Model):
     last_name = models.CharField(max_length=50)
     rut = models.CharField(max_length=14)
     advertisement_id = models.ForeignKey(advertisement, on_delete=models.CASCADE, default=None) 
+
+
+
 
 
 
