@@ -1,15 +1,25 @@
 from django.db import models
 #from phonenumber_field import PhoneNumberField
-from apps.evaluate.models import Ratings
+#from apps.evaluate.models import Ratings
+
 import uuid
 
 # Create your models here.
 
+class NameSocialNetworks(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    NameDescriptions = models.CharField(max_length=50, default=None)
+
+    def __str__(self):
+        return self.NameDescriptions
+
 class social_networks(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=50)
     user_socialNetwork = models.CharField(max_length=50)
-    #advertisement_id =  models.ForeignKey(advertisement, on_delete=models.CASCADE, default=None)
+    red = models.ManyToManyField(NameSocialNetworks, default=None)
+    
+    def __str__(self):
+        return self.user_socialNetwork
 
 class credits(models.Model): 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -17,18 +27,25 @@ class credits(models.Model):
     amount = models.IntegerField()
     time_recharge = models.TimeField(auto_now=False, auto_now_add=False, default=None)
     #advertisement_id = models.ForeignKey(advertisement, on_delete=models.CASCADE)
+    def __str__(self):
+        return str(self.amount)
 
 class phones(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    type = models.CharField(max_length=50)
+    typePhone = models.CharField(max_length=50)
     Number = models.CharField(max_length=12)
     wsp = models.BooleanField
     #advertisement_id = models.ForeignKey(advertisement, on_delete=models.CASCADE, default=None)
+    def __str__(self):
+        return self.Number
+
 
 class typeA(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     description = models.CharField(max_length=50)
     #advertisement_id = models.ForeignKey(advertisement, on_delete=models.CASCADE, default=None)
+    def __str__(self):
+        return self.description
 
 class subscription_plan(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -36,6 +53,8 @@ class subscription_plan(models.Model):
     amount = models.IntegerField
     valid_from = models.DateField(auto_now=True, auto_now_add=False)
     valid_to = models.DateField(auto_now=False, auto_now_add=False)
+    def __str__(self):
+        return self.description
 
 class advertisement(models.Model):
     HOURS = (
@@ -89,9 +108,10 @@ class advertisement(models.Model):
     (32, '23:30')
     )
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    Type = models.ForeignKey(typeA, on_delete=models.CASCADE, default=None)
-    Social_network = models.ForeignKey(social_networks, on_delete=models.CASCADE, default=None)
-    phones = models.ForeignKey(phones, on_delete=models.CASCADE, default=None)
+    name = models.CharField(default = None, max_length=50)
+    Type_advertisement = models.ForeignKey(typeA, on_delete=models.CASCADE, default=None)
+    Social_network = models.ManyToManyField(social_networks, default=None)
+    phones = models.ManyToManyField(phones, default=None)
     #PhoneNumberField(null=False, blank=False, unique=True)
     email = models.EmailField(max_length=254, default=None)                
     url_website = models.URLField(max_length=200, default=None)
@@ -107,4 +127,13 @@ class advertisement(models.Model):
     credits_id     = models.ForeignKey(credits, on_delete=models.CASCADE, default=None)
     open_from = models.IntegerField(choices=HOURS, default=None)
     open_to = models.IntegerField(choices=HOURS, default=None)
-    rating = models.ForeignKey(Ratings, on_delete=models.CASCADE, default=None)
+    #rating = models.ForeignKey(Ratings, on_delete=models.CASCADE, default=None)
+
+    def __str__(self):
+        return self.name
+
+    def get_socialNetwork(self):
+        return self.Social_network.name
+        # return ', '.join([s.name for s in self.Social_network_set.all()])
+    
+    get_socialNetwork.shot_description = 'Redes Sociales'
