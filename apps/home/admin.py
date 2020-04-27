@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.home.models import advertisement, typeA, social_networks, credits, phones, subscription_plan, NameSocialNetworks
+from apps.home.models import advertisement, typeA, social_networks, credits, phones, subscription_plan, NameSocialNetworks, OpeningHours, SpecialDays
 from apps.evaluate.models import Ratings
 from apps.admins.models import user, roles
 # Register your models here.
@@ -9,7 +9,7 @@ from apps.admins.models import user, roles
 
 @admin.register(advertisement)
 class advertisementAdmin(admin.ModelAdmin):
-    list_display = ('id','get_typeName', 'email', 'url_website', 'address', 'description', 'image', 'logo', 'latitude_longitude', 'incorporation_date', 'subscription_type', 'state', 'includes_maps', 'credits_id', 'open_from', 'open_to')
+    list_display = ('id','get_typeName', 'email', 'url_website', 'address', 'description', 'image', 'logo', 'latitude_longitude', 'incorporation_date', 'subscription_type', 'state', 'includes_maps', 'credits_id')
     #fields = ('get_typeName', 'email', 'url_website', 'address', 'description', 'image', 'logo', 'latitude_longitude', 'incorporation_date', 'subscription_type', 'state', 'includes_maps', 'credits_id', 'open_from', 'open_to')
     #list_filter = ('email', 'rating', 'type')
 
@@ -87,14 +87,10 @@ class RatingsAdmin(admin.ModelAdmin):
 class NameSocialNetworksAdmin(admin.ModelAdmin):
     list_display = ('id','NameDescriptions' )
 
-# admin.site.register(NameSocialNetworks, NameSocialNetworksAdmin)
-# admin.site.register(advertisement)
-# admin.site.register(typeA)
-# admin.site.register(social_networks)
-# admin.site.register(credits)
-# admin.site.register(phones)
-# admin.site.register(subscription_plan)
-# admin.site.register(roles)
-# admin.site.register(user)
-# admin.site.register(Ratings)
-# admin.site.register(NameSocialNetworks)
+@admin.register(OpeningHours)
+class OpeningHoursAdmin(admin.ModelAdmin):
+    list_display=('store','weekday_from', 'weekday_to', 'from_hour', 'to_hour')
+
+@admin.register(SpecialDays)
+class SpecialDaysAdmin(admin.ModelAdmin):
+    list_display = ('holiday_date', 'closed', 'from_hour', 'to_hour')
