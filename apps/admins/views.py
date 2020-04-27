@@ -6,10 +6,11 @@ from apps.home.models import advertisement
 class Admins(ListView):
     model = advertisement
     template_name = 'admins.html'
+    paginate_by = 6
 
 class Forms(ListView):
     model = advertisement
-    template_name = 'forms.html'
+    template_name = 'forms_add.html'
 
 class AllList(ListView):
     model = advertisement
