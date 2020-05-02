@@ -415,7 +415,7 @@
 									<h2><a href="#">{{adv.name}}</a></h2>
 									<p class="explore-rating-price">
 										<span class="explore-rating">{{adv.Score}}</span>
-										<a href="#"> 8 ratings</a> 
+										<a href="#">{{adv.countRatings}} Evaluaciones</a> 
 										<span class="explore-price-box">
 											form
 											<span class="explore-price">{{adv.price_from}}$-{{adv.price_to}}$</span>
@@ -441,14 +441,17 @@
 									<div class="explore-open-close-part">
 										<div class="row">
 											<div class="col-sm-5">
-												{% comment %} {% if adv.open_from and %%} {% endcomment %}
-												<button class="close-btn open-btn" onclick="window.location.href='#'">Abierto ahora</button>
+												{% if adv.open %}
+												<button class="close-btn open-btn" onclick="window.location.href='#'">Abierto ahora </button>
+												{% else %}
+												<button class="close-btn close-btn" onclick="window.location.href='#'">Cerrado </button>
+												{% endif %}
 											</div>
 											<div class="col-sm-7">
 												<div class="explore-map-icon">
-													<a href="#"><i data-feather="map-pin"></i></a>
-													<a href="#"><i data-feather="upload"></i></a>
-													<a href="#"><i data-feather="heart"></i></a>
+													<a href="https://maps.google.com/?q={{adv.latitude_longitude}}"><i data-feather="map-pin"></i></a>
+													{% comment %} <a href="#"><i data-feather="upload"></i></a> {% endcomment %}
+													{% comment %} <a href="#"><i data-feather="heart"></i></a> {% endcomment %}
 												</div>
 											</div>
 										</div>
